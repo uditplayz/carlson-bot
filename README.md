@@ -2,6 +2,8 @@
 
 A Discord bot that links a Discord text channel to your Twitch chat:
 
+Watch my stream in the background meanwhile you set this up for developer's luck ;) - <a href="https://www.twitch.tv/uditplayz">UditPlayz (click me)</a>
+
 - **Twitch → Discord:** every Twitch chat message shows up live in a Discord channel, with badges (🎙️ broadcaster, 🛡️ mod, 💎 VIP, ⭐ sub).
 - **Discord → Twitch (optional):**
   - `/say <message>` sends a single message to Twitch chat.
