@@ -1,0 +1,20 @@
+# systemd unit for a Linux VM (e.g. Oracle Cloud Always Free).
+# Install:  sudo cp deploy/carlson-bot.service /etc/systemd/system/
+#           sudo systemctl daemon-reload && sudo systemctl enable --now carlson-bot
+# Logs:     journalctl -u carlson-bot -f
+[Unit]
+Description=Carlson Twitch <-> Discord chat bridge
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/carlson-bot
+ExecStart=/usr/bin/node src/index.js
+Restart=always
+RestartSec=10
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
